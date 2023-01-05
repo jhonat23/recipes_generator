@@ -39,10 +39,15 @@ div {
   align-items: center;
   gap: 0.2vw;
   text-decoration: none;
+  color: inherit;
 }
 
 .navbar-icon {
   width: 2.5vw;
+}
+
+.navbar-text:hover {
+  font-size: larger;
 }
 
 //Main
@@ -103,7 +108,20 @@ textarea {
 }
 
 button {
-  width: 8%;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: larger;
+  border-radius: 5px;
+  width: 13%;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+button:hover {
+  background-color: white;
+  color: black
 }
 
 .result {
