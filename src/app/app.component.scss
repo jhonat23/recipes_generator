@@ -1,7 +1,9 @@
+// All page font
 div {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+// Header
 .header-block {
   background-image: url('../assets/images/Header.jpg');
   background-repeat: no-repeat;
@@ -43,7 +45,82 @@ div {
   width: 2.5vw;
 }
 
-// .header-image {
-//   max-width: 100%;
-//   max-height: 100%;
-// }
+//Main
+.food-images{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 1;
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  top: 45%;
+  background-color: rgba(138, 136, 136, 0.6);
+  margin-left: 22%;
+  margin-right: 22%;
+  text-align: center;
+  padding: 1%;
+  border-radius: 20px;
+}
+
+.intro-text {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.intro-text-message {
+  font-size: large;
+  font-weight: bold;
+}
+
+.food-images img {
+  width: 25%;
+}
+
+.input-ingridients {
+  text-align: center;
+}
+
+.typing-title {
+  margin-top: 0px;
+  margin-bottom: 1%;
+  padding-top: 2%;
+  color: white;
+}
+
+.submit-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+textarea {
+  width: 20%;
+}
+
+button {
+  width: 8%;
+}
+
+.result {
+  background-color: rgba(138, 136, 136, 0.6);
+  margin-left: 22%;
+  margin-right: 22%;
+  text-align: center;
+  padding: 1%;
+  border-radius: 20px;
+}
+
+.recipe {
+  background-image: url('../assets/images/pexels-martin-lopez-1040685.jpg');
+  background-size: cover;
+}
+
+.recipe p {
+  color: white;
+  font-size: large;
+}
