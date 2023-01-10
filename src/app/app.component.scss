@@ -51,10 +51,14 @@ div {
 }
 
 //Main
+.main {
+  position: relative;
+}
+
 .food-images{
   display: flex;
   flex-direction: row;
-  position: relative;
+  position: static;
   z-index: 1;
 }
 
@@ -63,7 +67,7 @@ div {
   flex-direction: column;
   position: absolute;
   z-index: 2;
-  top: 45%;
+  top: 20%;
   background-color: rgba(138, 136, 136, 0.6);
   margin-left: 22%;
   margin-right: 22%;
@@ -73,12 +77,12 @@ div {
 }
 
 .intro-text {
-  font-size: x-large;
+  font-size: 1.7vw;
   font-weight: bolder;
 }
 
 .intro-text-message {
-  font-size: large;
+  font-size: 1.4vw;
   font-weight: bold;
 }
 
@@ -91,6 +95,7 @@ div {
 }
 
 .typing-title {
+  font-size: 1.7vw;
   margin-top: 0px;
   margin-bottom: 1%;
   padding-top: 2%;
@@ -112,7 +117,7 @@ button {
   background-color: black;
   color: white;
   border: none;
-  font-size: larger;
+  font-size: 1.5vw;
   border-radius: 5px;
   width: 13%;
   cursor: pointer;
@@ -124,6 +129,16 @@ button:hover {
   color: black
 }
 
+.recipe {
+  background-image: url('../assets/images/pexels-martin-lopez-1040685.jpg');
+  background-size: cover;
+}
+
+.recipe p {
+  color: white;
+  font-size: 1.4vw;
+}
+
 .result {
   background-color: rgba(138, 136, 136, 0.6);
   margin-left: 22%;
@@ -133,12 +148,6 @@ button:hover {
   border-radius: 20px;
 }
 
-.recipe {
-  background-image: url('../assets/images/pexels-martin-lopez-1040685.jpg');
-  background-size: cover;
-}
-
-.recipe p {
-  color: white;
-  font-size: large;
+.recipe h2 {
+  font-size: 1.6vw;
 }
