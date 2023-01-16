@@ -14,140 +14,233 @@ div {
   justify-content: space-between;
   align-items: center;
   color: white;
-}
 
-.main-title {
-  font-size: 1.5vw;
-  margin-left: 1.5vw;
-}
+  .main-title {
+    font-size: 1.9vw;
+    margin-left: 1.5vw;
+  }
 
-.navbar {
-  font-size: 1.2vw;
-  padding-top: 4.5%;
-  padding-bottom: 0.5%;
-  padding-right: 1.5vw;
-  margin-top: 8%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.5vw;
-}
+  .navbar {
+    font-size: 1.2vw;
+    padding-top: 4.5%;
+    padding-bottom: 0.5%;
+    padding-right: 1.5vw;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5vw;
 
-.navbar-item {
-  display: flex;
-  align-items: center;
-  gap: 0.2vw;
-  text-decoration: none;
-  color: inherit;
-}
+    .navbar-item {
+      display: flex;
+      align-items: center;
+      gap: 0.2vw;
+      text-decoration: none;
+      color: inherit;
 
-.navbar-icon {
-  width: 2.5vw;
-}
+      .navbar-icon {
+        width: 2.5vw;
+      }
 
-.navbar-text:hover {
-  font-size: larger;
+      .navbar-text:hover {
+        font-size: larger;
+      }
+    }
+  }
 }
 
 //Main
 .main {
   position: relative;
+
+  .food-images{
+    display: flex;
+    flex-direction: row;
+    position: static;
+    z-index: 1;
+
+    img {
+      width: 25%;
+    }
+  }
+
+  .main-text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    background-color: rgba(138, 136, 136, 0.6);
+    margin-left: 22%;
+    margin-right: 22%;
+    text-align: center;
+    padding: 1%;
+    border-radius: 20px;
+
+    .intro-text {
+      font-size: 1.7vw;
+      font-weight: bolder;
+    }
+
+    .intro-text-message {
+      font-size: 1.4vw;
+      font-weight: bold;
+    }
+  }
 }
 
-.food-images{
-  display: flex;
-  flex-direction: row;
-  position: static;
-  z-index: 1;
-}
-
-.main-text {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  z-index: 2;
-  top: 20%;
-  background-color: rgba(138, 136, 136, 0.6);
-  margin-left: 22%;
-  margin-right: 22%;
-  text-align: center;
-  padding: 1%;
-  border-radius: 20px;
-}
-
-.intro-text {
-  font-size: 1.7vw;
-  font-weight: bolder;
-}
-
-.intro-text-message {
-  font-size: 1.4vw;
-  font-weight: bold;
-}
-
-.food-images img {
-  width: 25%;
-}
-
-.input-ingridients {
-  text-align: center;
-}
-
-.typing-title {
-  font-size: 1.7vw;
-  margin-top: 0px;
-  margin-bottom: 1%;
-  padding-top: 2%;
-  color: white;
-}
-
-.submit-data {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-textarea {
-  width: 20%;
-}
-
-button {
-  padding: 8px;
-  background-color: black;
-  color: white;
-  border: none;
-  font-size: 1.5vw;
-  border-radius: 5px;
-  width: 13%;
-  cursor: pointer;
-  transition: background-color 0.5s;
-}
-
-button:hover {
-  background-color: white;
-  color: black
-}
-
+//Recipe
 .recipe {
   background-image: url('../assets/images/pexels-martin-lopez-1040685.jpg');
   background-size: cover;
+
+  p {
+    color: white;
+    font-size: 1.4vw;
+  }
+
+  h2 {
+    font-size: 1.6vw;
+  }
+
+  .input-ingridients {
+    text-align: center;
+
+    .typing-title {
+      font-size: 1.7vw;
+      margin-top: 0px;
+      margin-bottom: 1%;
+      padding-top: 2%;
+      color: white;
+    }
+
+    .submit-data {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      textarea {
+        width: 30vw;
+        height: 20vh;
+        font-size: 1.4vw;
+      }
+
+      button {
+        padding: 8px;
+        background-color: black;
+        color: white;
+        border: none;
+        font-size: 1.3vw;
+        border-radius: 5px;
+        width: 13%;
+        cursor: pointer;
+        transition: background-color 0.5s;
+      }
+
+      button:hover {
+        background-color: white;
+        color: black
+      }
+    }
+  }
 }
 
-.recipe p {
-  color: white;
-  font-size: 1.4vw;
-}
-
+//Result
 .result {
   background-color: rgba(138, 136, 136, 0.6);
   margin-left: 22%;
   margin-right: 22%;
+  margin-bottom: 5%;
   text-align: center;
   padding: 1%;
   border-radius: 20px;
 }
 
-.recipe h2 {
-  font-size: 1.6vw;
+//Media queries
+@media screen and (max-width: 425px) {
+  //Header
+  .header-block {
+    .navbar{
+      background-color: black;
+      padding-top: 1vw;
+      padding-right: 3vw;
+      padding-left: 3vw;
+      padding-bottom: 1vw;
+      margin-top: 11%;
+      gap: 5vw;
+
+      .navbar-item {
+        .navbar-text {
+          display: none;
+        }
+
+        .navbar-icon {
+          width: 6.2vw;
+        }
+      }
+    }
+  }
+
+  //Main
+  .show {
+    display: none;
+  }
+
+  .main {
+    .food-images{
+
+      img {
+        width: 50%;
+      }
+    }
+
+    .main-text {
+      margin-left: 18%;
+      margin-right: 18%;
+
+      .intro-text {
+        font-size: 2.6vw;
+        font-weight: bolder;
+      }
+
+      .intro-text-message {
+        font-size: 2.2vw;
+        font-weight: bold;
+      }
+    }
+  }
+
+  //Recipe
+  .recipe {
+
+    p {
+      font-size: 2.5vw;
+    }
+
+    h2 {
+      font-size: 5vw;
+    }
+
+    .input-ingridients {
+
+      .typing-title {
+        font-size: 4vw;
+      }
+
+      .submit-data {
+
+        textarea {
+          width: 50vw;
+          height: 10vh;
+          font-size: 2.6vw;
+        }
+
+        button {
+          font-size: 2.5vw;
+          width: 25%;
+        }
+      }
+    }
+  }
 }
