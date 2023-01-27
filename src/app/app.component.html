@@ -54,14 +54,14 @@
 <div class="recipe">
   <div class="input-ingridients">
     <h2 class="typing-title">
-      Type here your ingridients:
+      Type here your ingridients (you can write in english or spanish):
     </h2>
     <div class="submit-data">
       <div>
-        <textarea type="text" placeholder="1 potato, 2 potatoes, 300g of pork..."></textarea>
+        <textarea [(ngModel)]="ingridients" type="text" placeholder="1 potato, 2 potatoes, 300g of pork..."></textarea>
       </div>
       <div>
-        <button (click)="obtainExampleRecipe()" type="submit">See the magic</button>
+        <button (click)="obtainRecipe()" type="submit">See the magic</button>
       </div>
     </div>
     <p>
@@ -70,11 +70,8 @@
   </div>
 
   <div class="result">
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt nisi tempore repudiandae soluta provident repellat, ab earum facilis adipisci architecto rerum. Nobis neque, nulla dolor voluptas cupiditate voluptatum officiis reiciendis!
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt nisi tempore repudiandae soluta provident repellat, ab earum facilis adipisci architecto rerum. Nobis neque, nulla dolor voluptas cupiditate voluptatum officiis reiciendis
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt nisi tempore repudiandae soluta provident repellat, ab earum facilis adipisci architecto rerum. Nobis neque, nulla dolor voluptas cupiditate voluptatum officiis reiciendis
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt nisi tempore repudiandae soluta provident repellat, ab earum facilis adipisci architecto rerum. Nobis neque, nulla dolor voluptas cupiditate voluptatum officiis reiciendis
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt nisi tempore repudiandae soluta provident repellat, ab earum facilis adipisci architecto rerum. Nobis neque, nulla dolor voluptas cupiditate voluptatum officiis reiciendis
+    <p>
+      {{ recipe }}
     </p>
     <h2>
       Enjoy!
