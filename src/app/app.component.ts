@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   menuDisabled: boolean = true;
   example_recipe: any;
   recipe: any = '\u{1F9C6}';
-  ingridients: any;
+  ingredients: any;
   temp: any;
 
 
@@ -30,11 +30,11 @@ export class AppComponent implements OnInit {
 
   obtainExampleRecipe() {
     console.log(this.recipe);
-    console.log(this.ingridients);
+    console.log(this.ingredients);
   }
 
   obtainRecipe() {
-    this.fastapi.getRecipe(this.ingridients).subscribe(data => {
+    this.fastapi.getRecipe(this.ingredients).subscribe(data => {
       console.log(data);
       this.temp = data;
       this.recipe = this.temp.instructions;

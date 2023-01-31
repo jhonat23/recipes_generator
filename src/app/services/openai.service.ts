@@ -14,11 +14,11 @@ params: HttpParams = new HttpParams();
   ) { }
 
   getExampleRecipe(){
-    return this.api.get('https://recipe-generator-api.onrender.com/example-recipe');
+    return this.api.get('https://recipe-gen-api.onrender.com/example-recipe');
   }
 
-  getRecipe(recipe: string) {
-    this.params = this.params.append('recipe', recipe);
-    return this.api.post('https://recipe-generator-api.onrender.com/recipe', this.params, {headers: this.headers});
+  getRecipe(ingredients: string) {
+    this.params = this.params.append('ingredients', ingredients);
+    return this.api.post('https://recipe-gen-api.onrender.com/user-recipe', this.params, {headers: this.headers});
   }
 }
