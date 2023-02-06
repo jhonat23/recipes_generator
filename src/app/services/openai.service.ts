@@ -8,6 +8,7 @@ export class OpenaiService {
 
 headers: HttpHeaders = new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'});
 params: HttpParams = new HttpParams();
+response: any;
 
   constructor(
     private api: HttpClient
@@ -19,6 +20,7 @@ params: HttpParams = new HttpParams();
 
   getRecipe(ingredients: string) {
     this.params = this.params.append('ingredients', ingredients);
-    return this.api.post('https://recipe-gen-api.onrender.com/user-recipe', this.params, {headers: this.headers});
+    this.response = this.api.post('https://recipe-gen-api.onrender.com/user-recipe', this.params, {headers: this.headers});
+    return this.response;
   }
 }

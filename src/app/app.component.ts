@@ -10,16 +10,16 @@ import { OpenaiService } from '../app/services/openai.service';
 export class AppComponent implements OnInit {
   title: string = 'recipes_generator';
 
+
   constructor(
     private fastapi: OpenaiService
   ) {}
 
-  menuDisabled: boolean = true;
   example_recipe: any;
-  recipe: any = '\u{1F9C6}';
+  recipe: string = '\u{1F9C6}';
   ingredients: any;
   temp: any;
-
+  loader: boolean = false;
 
   ngOnInit(): void {
     this.fastapi.getExampleRecipe().subscribe(data => {
@@ -33,12 +33,16 @@ export class AppComponent implements OnInit {
     console.log(this.ingredients);
   }
 
+  start = performance.now();
   obtainRecipe() {
-    this.fastapi.getRecipe(this.ingredients).subscribe(data => {
+    this.loader = true;
+    this.fastapi.getRecipe(this.ingredients).subscribe((data: any) => {
       console.log(data);
       this.temp = data;
       this.recipe = this.temp.instructions;
+      if(this.recipe.length > 9) {
+        this.loader = false;
+      }
     })
   }
-
 }

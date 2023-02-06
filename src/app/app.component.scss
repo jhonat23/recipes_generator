@@ -94,6 +94,8 @@ div {
 .recipe {
   background-image: url('../assets/images/pexels-martin-lopez-1040685.jpg');
   background-size: cover;
+  height: auto;
+  padding-bottom: 5%;
 
   p {
     color: white;
@@ -151,7 +153,7 @@ div {
   background-color: rgba(138, 136, 136, 0.6);
   margin-left: 22%;
   margin-right: 22%;
-  margin-bottom: 5%;
+  margin-bottom: 0%;
   text-align: center;
   padding: 1%;
   border-radius: 20px;
